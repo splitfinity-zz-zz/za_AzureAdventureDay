@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
   name: gamebot
 spec:
-  replicas: 3
+  replicas: 10
   selector:
     matchLabels:
       name: gamebot      
