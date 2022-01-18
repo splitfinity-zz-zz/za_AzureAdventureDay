@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
   name: gamebot
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       name: gamebot      
@@ -46,7 +46,12 @@ spec:
             value: "8080"
           - name: "PICK_STRATEGY"
             value: "RANDOM"
-          - name: "FF_BETS"
-            value: "1" 
           - name: "APPINSIGHTS_INSTRUMENTATIONKEY"
-            value: "0138e6ef-3f0b-48ed-8040-19aa2a1a570d"            
+            value: "0138e6ef-3f0b-48ed-8040-19aa2a1a570d"
+          - name: "FF_BETS"
+            value: "1"
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 10
