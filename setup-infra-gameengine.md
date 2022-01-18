@@ -34,7 +34,7 @@ Azure CloudShell (http://shell.azure.com) enables you to clone this repository d
 
 2. Clone this repo in CloudShell. This command downloads the git repository to your machine.
 ```
-git clone https://github.com/azure-adventure-day/aad-team.git
+git clone https://github.com/splitfinity/za_AzureAdventureDay/aad-team.git
 ```
 
 3. [Infrastructure as Code](https://devblogs.microsoft.com/devops/what-is-infrastructure-as-code/) with Terraform is used for deploying all Azure resources, which is defined in the [./terraform](./terraform) folder.<br/>
